@@ -57,6 +57,9 @@ switch ($action) {
     case "encestar":
         $central = "<p>Todavía no puedo añadir a la cesta</p>"; //tabla compras
         break;
+    case "cerrar_sesion":
+        unset($_SESSION["usuario"]);
+        break;
     case "realizar_compra":
         $central = "<p>Todavía no puedo añadir a la cesta</p>"; //cesta en $_SESSION["cesta"]
         break;

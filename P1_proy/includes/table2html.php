@@ -21,6 +21,7 @@ function table2html($table)
                 elseif ($key == "imagen") {
                     print "<img class='imgProducto' src=$value>";
                 }
+                
             }
             print "</p>";
             print "<hr/>";
