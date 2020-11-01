@@ -16,13 +16,18 @@ function table2html($table)
             print "<p class='pProducto'>";
             foreach($row as $key => $value){
                 if($key == "nombre"){
-                    print "$value :";
+                    print "<b>$value :</b>";
                 }
                 elseif ($key == "imagen") {
                     print "<img class='imgProducto' src=$value>";
                 }
                 
             }
+
+            if (isset($_SESSION['usuario'])){
+                print "<button class='botonProducto'>Añadir a la cesta</button>";
+            }
+
             print "</p>";
             print "<hr/>";
 
