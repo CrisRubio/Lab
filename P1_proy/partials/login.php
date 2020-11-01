@@ -1,5 +1,5 @@
 <main>
-	<h1>Gestion de Usuarios </h1>
+	<h1>Iniciar sesión : </h1>
 	<form class="form_usuario" action="./portal.php?action=do_login" method="POST">
 		<fieldset>
 			<legend>Datos básicos</legend>

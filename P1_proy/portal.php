@@ -8,7 +8,6 @@
  * * @version 1
 
  * */
-
 session_start();
 
 include(dirname(__FILE__)."/includes/ejecutarSQL.php");
@@ -60,6 +59,9 @@ switch ($action) {
     case "realizar_compra":
         $central = "<p>Todavía no puedo añadir a la cesta</p>"; //cesta en $_SESSION["cesta"]
         break;
+    case "cerrar_sesion":
+        session_destroy();
+        header("Location: portal.php");
     default:
         $data["error"] = "Accion No permitida";
         $central = "/partials/centro.php";
