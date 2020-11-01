@@ -7,9 +7,9 @@
 			<br/>
 			<input type="text" name="nombre" class="item_requerid" size="20" maxlength="25"  placeholder="Miguel" />
 			<br/>
-			<label for="passwd">Contraseña</label>
+			<label for="clave">Contraseña</label>
 			<br/>
-			<input type="password" name="passwd"  class="item_requerid" size="20" maxlength="25" value="xxxx" />
+			<input type="password" name="clave"  class="item_requerid" size="20" maxlength="25" value="xxxx" />
 			<br/>
 		</fieldset>
 		<p>

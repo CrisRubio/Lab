@@ -1,6 +1,6 @@
 <main>
 	<h1>Datos de registro: </h1>
-	<form class="form_usuario" action="?action=registrar_usuario" method="POST">
+	<form class="form_usuario" action="?action=insertar_usuario" method="POST">
 		<br>
 		<label for="nombre">Nombre</label>
 		<br/>

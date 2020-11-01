@@ -4,28 +4,32 @@ function autentificar_usuario($table)
 {
     global $pdo;
 
+    $datos = $_REQUEST;
+    if (count($_REQUEST) < 2) {
+        $data["error"] = "No has rellenado el formulario correctamente";
+        return;
+    }
+
     $query = "SELECT * FROM  $table;";
 
-    $rows = $pdo->query($query)->fetchAll(\PDO::FETCH_ASSOC);
+    try {
 
-    if (is_array($rows)) {
-        foreach ($rows as $row) {
-            foreach ($row as $key => $val) {
-                if($key)
-                print "<br>";
-                echo $val;
+        $rows = $pdo->query($query)->fetchAll(\PDO::FETCH_ASSOC);
+            
+        if (is_array($rows)) {
+            foreach ($rows as $row) {
+                foreach ($row as $key => $val) {
+                    if(($key == "nombre" && $_REQUEST['nombre']==$val) && ($key == "clave" && $_REQUEST['clave']==$val)){
+                        echo "<h1> ¡ Bienvenido ! </h1>";
+                        $_SESSION["usuario"] = "normal";
+                    }
+                }
             }
         }
-    }
-    else
-        print "<h1> No hay resultados </h1>"; 
-    }
 
-    /*
-    buscar usuario y passwd en DB y comparar con $_POST
-    según el resultado fijar la variable de sesion of mostar error
-
-    $_SESSION["usuario"] = role
-    */
+    } catch (PDOExeption $e) {
+        echo ($e->getMessage());
+    }
+}
 
 ?>
