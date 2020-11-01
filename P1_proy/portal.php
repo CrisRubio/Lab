@@ -51,7 +51,7 @@ switch ($action) {
         $central = "<p>Todavía no puedo insertar productos en la BD</p>"; //tabla productos
         break;
     case "ver_cesta":
-        $central = "<p>Todavia no puedo ver la cesta</p>"; //cesta en $_SESSION["cesta"]
+        $central = "/partials/cesta.php";
         break;
     case "encestar":
         $central = "<p>Todavía no puedo añadir a la cesta</p>"; //tabla compras

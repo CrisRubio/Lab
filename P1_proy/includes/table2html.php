@@ -25,7 +25,7 @@ function table2html($table)
             }
 
             if (isset($_SESSION['usuario'])){
-                print "<button class='botonProducto'>Añadir a la cesta</button>";
+                print "<a class='linkProducto' href='?action=ver_cesta'>Añadir a la cesta</a>";
             }
 
             print "</p>";
