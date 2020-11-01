@@ -15,9 +15,10 @@ function registrar_usuario($table)
         $a = $consult->execute(array($_REQUEST['nombre'], $_REQUEST['email'],$_REQUEST['clave']  ));
 
         if (1>$a) echo "<h1> Inserción incorrecta </h1>";
-        else echo "<h1> Usuario registrado! </h1><button href='?action=login'>Iniciar Sesión</button>";
-
-        $_SESSION["usuario"] = "normal";
+        else {
+            $_SESSION["usuario"] = "normal";
+            header("Location: portal.php");
+        }
     
     } catch (PDOExeption $e) {
         echo ($e->getMessage());
