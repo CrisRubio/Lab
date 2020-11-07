@@ -1,6 +1,6 @@
 <?php
 
-function registrar_usuario($table)
+function registrar_producto($table)
 {
     global $pdo;
 
@@ -12,15 +12,10 @@ function registrar_usuario($table)
     $query = "INSERT INTO $table VALUES (?,?,?);";
     try { 
         $consult = $pdo -> prepare($query);
-        $a = $consult->execute(array($_REQUEST['nombre'], $_REQUEST['email'],$_REQUEST['clave']  ));
+        $a = $consult->execute(array($_REQUEST['product_id'], $_REQUEST['nombre'],$_REQUEST['imagen']));
 
         if (1>$a) echo "<h1> Inserción incorrecta </h1>";
-        else {
-            if ($_REQUEST['nombre'] == "admin"){
-                $_SESSION["usuario"] = "admin";
-            } else {
-                $_SESSION["usuario"] = "normal";
-            }            
+        else {         
             header("Location: portal.php");
         }
     

@@ -1,5 +1,5 @@
 <main>
-	<h1>Registrar usuario : </h1>
+	<h1>Registrar producto : </h1>
 	<form class="form_usuario" action="?action=insertar_usuario" method="POST">
 		<br>
 		<label for="nombre">Nombre</label>

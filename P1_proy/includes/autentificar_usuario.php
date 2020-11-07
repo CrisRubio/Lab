@@ -16,12 +16,14 @@ function autentificar_usuario($table)
 
         $rows = $pdo->query($query)->fetchAll(\PDO::FETCH_ASSOC);
         $count = 0;
+        $nombre = "";
         
         if (is_array($rows)) {
             foreach ($rows as $row) {
                 foreach ($row as $key => $val) {
                     if($key == "nombre" && $_REQUEST['nombre']==$val){
                         $count = 1;
+                        $nombre = $val;
                     } 
                     
                     if ($key == "clave" && $_REQUEST['clave']==$val){
@@ -32,7 +34,11 @@ function autentificar_usuario($table)
         }
 
         if($count==2){
-            $_SESSION["usuario"] = "normal";
+            if($nombre == "admin"){
+                $_SESSION["usuario"] = "admin";
+            } else {
+                $_SESSION["usuario"] = "normal";
+            }            
             header("Location: portal.php");
         } else {
             echo "<h1> No se ha iniciado sesión correctamente </h1>";
