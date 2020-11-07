@@ -63,6 +63,7 @@ switch ($action) {
     case "cerrar_sesion":
         session_destroy();
         header("Location: portal.php");
+        break;
     default:
         $data["error"] = "Accion No permitida";
         $central = "/partials/centro.php";

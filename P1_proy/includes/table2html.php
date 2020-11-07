@@ -24,7 +24,7 @@ function table2html($table)
                 
             }
 
-            if (isset($_SESSION['usuario'])){
+            if (isset($_SESSION['usuario']) and $_SESSION['usuario'] != 'admin'){
                 print "<a class='linkProducto' href='?action=ver_cesta'>Añadir a la cesta</a>";
             }
 
