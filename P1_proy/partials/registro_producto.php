@@ -25,7 +25,7 @@
         		<input type="file" accept="image/*" name="tmp_file" id="upload" class="fileImage" onchange=handleFiles()>
 				<br/>
 				<br>
-				<canvas class="canvasImage"></canvas>
+				<canvas class="canvasImage" id="canvas"></canvas>
 				<br/>
 				<br>
         		<input type="submit" value="SUBIR" name="submit"  onclick=cerrar()>
