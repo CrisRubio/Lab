@@ -14,9 +14,26 @@
 		 placeholder="Teclado" />
 		<br/>
 		<br>
-		<label for="imagen">Url imagen</label>
+		<label for="imagen">Imagen</label>
 		<br/>
-		<input type="text" name="imagen" class="item_required" size="50" maxlength="500" value=""/>
+		<div id="insert" class="insertForm">
+			<img class="closeForm" src="./img/close.jpg" onclick=cerrar() alt="close" />
+			<br>
+			<form action="?action=upload" method="post" enctype="multipart/form-data">
+        		Selecciona una imagen:
+				<br>
+        		<input type="file" accept="image/*" name="tmp_file" id="upload" class="fileImage" onchange=handleFiles()>
+				<br/>
+				<br>
+				<canvas class="canvasImage"></canvas>
+				<br/>
+				<br>
+        		<input type="submit" value="SUBIR" name="submit"  onclick=cerrar()>
+				<br/>
+				<br>
+			</form>
+		</div>
+		<button type="button" class="buttonImage" onclick=mostrar()>Insertar Imagen</button>
 		<br/>
 		<p><input type="submit" value="Enviar">
 		<input type="reset" value="Deshacer">

@@ -29,6 +29,9 @@ switch ($action) {
         break;
     case "sobre_nosotros":
         $central = "/partials/nosotros.php";
+    break;
+    case "upload":
+        $central = "upload()"; //insertar imagen
         break;
     case "login": 
         $central = "/partials/login.php"; //formulario login 
