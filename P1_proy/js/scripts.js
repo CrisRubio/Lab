@@ -11,6 +11,6 @@ function handleFiles(e){
     let img = new Image;
     img.src = URL.createObjectURL(e.target.files[0]);
     img.onload=function(){
-        ctx.drawImage(img, 20, 20);
+        ctx.drawImage(img, 10, 10);
     }
 }
