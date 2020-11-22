@@ -28,7 +28,7 @@
 				<canvas class="canvasImage" id="canvas"></canvas>
 				<br/>
 				<br>
-        		<input type="submit" value="SUBIR" name="submit" onclick=url()>
+        		<input type="submit" value="SUBIR" name="submit">
 				<br/>
 				<br>
 			</form>
