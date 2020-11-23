@@ -6,6 +6,10 @@ function cerrar(){
     document.getElementById('insert').style.display="none";
 }
 
+function upload(){
+    alert(window.location.href);
+}
+
 function handleFiles(e){
     let ctx = document.getElementById('canvas').getContext('2d');
     let img = new Image;

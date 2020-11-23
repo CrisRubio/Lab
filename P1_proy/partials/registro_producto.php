@@ -16,6 +16,7 @@
 		<br>
 		<label for="imagen">Imagen</label>
 		<br>
+		<input type="text" name="imagen" size="20" maxlength="100">
 		<div id="insert" class="insertForm">
 			<img class="closeForm" src="./img/close.jpg" onclick=cerrar() alt="close" />
 			<br>
