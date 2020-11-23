@@ -1,7 +1,6 @@
 <?php
 
 function upload(){
-
     $target_dir = "img/";
     $target_file = $target_dir.basename($_FILES["tmp_file"]["name"]);
     $upload = 1;
@@ -32,7 +31,7 @@ function upload(){
     }
     
     //Aceptar formatos
-    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "jpeg"){
+    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"){
         echo "Dicho fichero no está permitido.";
         $upload = 0;
     }

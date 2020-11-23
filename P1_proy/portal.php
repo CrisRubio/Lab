@@ -32,6 +32,7 @@ switch ($action) {
         $central = "/partials/nosotros.php";
     break;
     case "upload":
+        alert();
         upload(); //insertar imagen
         break;
     case "login": 
