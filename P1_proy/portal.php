@@ -31,7 +31,7 @@ switch ($action) {
         $central = "/partials/nosotros.php";
     break;
     case "upload":
-        $central = "/partials/upload.php"; //insertar imagen
+        $central = upload(); //insertar imagen
         break;
     case "login": 
         $central = "/partials/login.php"; //formulario login 

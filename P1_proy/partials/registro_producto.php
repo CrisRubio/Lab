@@ -2,7 +2,7 @@
 	<h1>Registrar producto : </h1>
 	<form method="POST">
 		<br>
-		<label method="" for="product_id">Identificador</label>
+		<label method="?action=insertar_producto" for="product_id">Identificador</label>
 		<br/>
 		<input type="number" name="product_id" class="item_required" size="20" maxlength="5" value=""
 		 placeholder="123" />
