@@ -1,6 +1,7 @@
 <?php
 
 function upload(){
+
     $target_dir = "img/";
     $target_file = $target_dir.basename($_FILES["tmp_file"]["name"]);
     $upload = 1;

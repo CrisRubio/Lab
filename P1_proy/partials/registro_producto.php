@@ -19,7 +19,7 @@
 		<div id="insert" class="insertForm">
 			<img class="closeForm" src="./img/close.jpg" onclick=cerrar() alt="close" />
 			<br>
-			<form action="?action=upload" method="post" enctype="multipart/form-data">
+			<form action="?action=upload" method="POST" enctype="multipart/form-data">
         		Selecciona una imagen:
 				<br>
         		<input type="file" accept="image/*" name="tmp_file" id="tmp_file" class="fileImage" onchange=handleFiles(event)>
