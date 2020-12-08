@@ -117,13 +117,11 @@ function insertarProductos(){
 
 function insertarOpcionesLista(Lista){
     Lista.forEach( x => {
-        var input = document.getElementById("listaProductos");
+        var input = document.getElementById("productos");
         var nombreProducto = x.nombre
-        console.log(nombreProducto)
-        var opcion = document.createElement('option');
-        var nombreOpcion = document.createTextNode(nombreProducto)
-        opcion.appendChild(nombreOpcion)
 
+        let opcion = document.createElement('option');
+        opcion.value = nombreProducto
         input.appendChild(opcion)
     })
 }

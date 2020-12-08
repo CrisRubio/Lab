@@ -9,8 +9,7 @@
 <br>
 <label for="producto">Elige el producto : </label>
 <input list="productos" name="producto" id="producto">
-<datalist id="listaProductos">
-    <option>Hola</option>
+<datalist id="productos">
 </datalist>
 <button onclick=insertarOpciones()>Insertar opciones</button>
 
