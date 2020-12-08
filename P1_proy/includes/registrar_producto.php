@@ -12,7 +12,7 @@ function registrar_producto($table)
     $query = "INSERT INTO $table VALUES (?,?,?);";
     try { 
         $consult = $pdo -> prepare($query);
-        $a = $consult->execute(array($_REQUEST['product_id'], $_REQUEST['nombre'],$_REQUEST['imagen']));
+        $a = $consult->execute(array($_REQUEST['product_id'], $_REQUEST['nombre'],$_REQUEST['precio'],$_REQUEST['imagen']));
 
         if (1>$a) echo "<h1> Inserción incorrecta </h1>";
         else {         

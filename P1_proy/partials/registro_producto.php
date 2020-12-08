@@ -14,6 +14,12 @@
 		 placeholder="Teclado" />
 		<br/>
 		<br>
+		<label for="precio">Precio</label>
+		<br/>
+		<input type="number" name="precio" class="item_required" size="20" maxlength="100" value=""
+		 placeholder="30.45" />
+		<br/>
+		<br>
 		<label for="imagen">Imagen</label>
 		<br>
 		<input type="text" name="imagen" size="20" maxlength="100">

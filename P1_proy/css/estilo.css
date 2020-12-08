@@ -226,3 +226,15 @@ section#blog {
     right: 1px;
     top: 1px;
 }
+
+.visor{
+    background-color: lightblue;
+    width: 100px;
+    overflow-x: scroll;
+    display: flex;
+}
+
+.item{
+    margin: 5px;
+    background-color: white;
+}

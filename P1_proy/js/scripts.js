@@ -18,3 +18,15 @@ function handleFiles(e){
         ctx.drawImage(img, 10, 10);
     }
 }
+
+function mostrarDatosProductos(){
+    fetch('/partials/datos.php')
+    .then(response=>{
+                    if(response.ok)
+                        return response.json()
+                    else
+                        throw response.statusText
+    })
+    .then(data=>console.log(JSON.stringify(data)))
+    .catch(err=>console.log('Fetch error: ', err));
+}

@@ -13,6 +13,9 @@ function table2html($table)
     if (is_array($rows)) {/* Creamos un listado como una tabla HTML*/
         print "<br>";
         foreach ($rows as $row) {
+
+            
+
             print "<p class='pProducto'>";
             foreach($row as $key => $value){
                 if($key == "nombre"){
@@ -20,6 +23,9 @@ function table2html($table)
                 }
                 elseif ($key == "imagen") {
                     print "<img class='imgProducto' src=$value>";
+                }
+                elseif ($key == "precio") {
+                    print "<b> $value €</b>";
                 }
                 
             }
@@ -32,6 +38,15 @@ function table2html($table)
             print "<hr/>";
 
         }
+        print "
+            <div class='visor'>
+                <div id='1' class='item'>
+                    <img src='img/monitor.jpg' width='100' height='100'>
+                    <p>Monitor 100€</p>
+                    <button>Comprar</button>
+                </div>
+            </div>
+        ";
     } 
     else
         print "<h1> No hay resultados </h1>"; 
