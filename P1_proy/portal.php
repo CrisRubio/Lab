@@ -48,6 +48,7 @@ switch ($action) {
         $central = registrar_usuario("usuarios"); //tabla usuarios
         break;
     case "listar_productos":
+        //$central = "/partials/listarProductos.php";
         $central = table2html("productos"); //tabla productos
         break;
     case "registrar_producto":

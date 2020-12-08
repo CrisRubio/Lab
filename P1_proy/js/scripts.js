@@ -30,3 +30,11 @@ function mostrarDatosProductos(){
     .then(data=>console.log(JSON.stringify(data)))
     .catch(err=>console.log('Fetch error: ', err));
 }
+
+function visorProductos(){
+    console.log("hola");
+    var hijo = document.createElement('div');
+    hijo.className = "item";
+    document.getElementById("visorProductos").appendChild("hijo");
+
+}
