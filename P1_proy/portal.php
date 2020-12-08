@@ -19,7 +19,6 @@ include(dirname(__FILE__)."/includes/table2html.php");
 include(dirname(__FILE__)."/includes/registrar_usuario.php");
 include(dirname(__FILE__)."/includes/registrar_producto.php");
 include(dirname(__FILE__)."/includes/autentificar_usuario.php");
-include(dirname(__FILE__)."/partials/datos.php");
 include(dirname(__FILE__)."/includes/upload.php");
 
 if (isset($_REQUEST['action'])) $action = $_REQUEST["action"];

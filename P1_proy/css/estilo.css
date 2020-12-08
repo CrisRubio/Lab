@@ -228,13 +228,21 @@ section#blog {
 }
 
 .visor{
+    margin: 0 auto;
     background-color: lightblue;
-    width: 100px;
+    width: 500px;
     overflow-x: scroll;
     display: flex;
+    text-align: center;
 }
 
 .item{
     margin: 5px;
+    padding: 5px;
     background-color: white;
+}
+
+.imgVisor{
+    width: 150px;
+    height: 100px;
 }

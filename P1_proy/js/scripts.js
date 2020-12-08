@@ -20,7 +20,7 @@ function handleFiles(e){
 }
 
 function mostrarDatosProductos(){
-    fetch('/partials/datos.php')
+    fetch('/P1_proy/partials/datos.php')
     .then(response=>{
                     if(response.ok)
                         return response.json()
