@@ -47,6 +47,16 @@ function table2html($table)
 
         print "</p>";
         print "<hr/>";
+
+        print " <label for='products'>Elige un producto</label>
+                <input list='products' name='prduct' id='product'>
+                <datalist id='products'>
+                    <option value='Monitor'>Monitor</option>
+                    <option value='Raton'>Raton</option>
+                </datalist>
+                <button  onclick=insertarProductos()>Hola</button>
+        ";
+
     } 
     else
         print "<h1> No hay resultados </h1>";

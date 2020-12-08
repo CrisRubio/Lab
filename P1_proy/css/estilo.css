@@ -231,6 +231,7 @@ section#blog {
     margin: 0 auto;
     background-color: lightblue;
     width: 500px;
+    height: 260px;
     overflow-x: scroll;
     display: flex;
     text-align: center;
@@ -239,10 +240,16 @@ section#blog {
 .item{
     margin: 5px;
     padding: 5px;
+    width: 250px;
+    height: 210px;
     background-color: white;
 }
 
 .imgVisor{
     width: 150px;
     height: 100px;
+}
+
+.botonVisor{
+    margin-left: 430px;
 }
