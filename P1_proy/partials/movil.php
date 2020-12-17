@@ -166,14 +166,14 @@ function addItem(color, text, img, precio){
 
 function addItemList(text){
     let node = document.createElement('ons-list-item')
-    node.nodeName="monitor"
+    node.id=text
     node.innerHTML = `<span id="itemProducto" class="miItem">${text}</span>
-                      <ons-button class="elimina" onclick=eliminarProducto()>Eliminar</ons-button>`
+                      <ons-button class="elimina" onclick=eliminarProducto("${text}")>Eliminar</ons-button>`
     document.getElementById('productsList').appendChild(node)
   }
 
-function eliminarProducto(){
-  //document.getElementById('productsList').childNodes
+function eliminarProducto(text){
+  document.getElementById(text).style.display="none";
 }
 </script>
   
