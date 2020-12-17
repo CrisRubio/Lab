@@ -157,7 +157,7 @@ function addItem(color, text, img, precio){
                       Precio : ${precio} €
                       <br>
                       <br>
-                      <button onclick=addItemList()>Comprar</button>
+                      <button onclick=addItemList("${text}")>Comprar</button>
                       </div>`
     document.getElementById('carousel').appendChild(nodo)
   }
@@ -166,10 +166,15 @@ function addItem(color, text, img, precio){
 
 function addItemList(text){
     let node = document.createElement('ons-list-item')
-    node.innerHTML = `<span class="miItem">${text}</span>
-                      <ons-button class="elimina">Eliminar</ons-button>`
+    node.nodeName="monitor"
+    node.innerHTML = `<span id="itemProducto" class="miItem">${text}</span>
+                      <ons-button class="elimina" onclick=eliminarProducto()>Eliminar</ons-button>`
     document.getElementById('productsList').appendChild(node)
   }
+
+function eliminarProducto(){
+  //document.getElementById('productsList').childNodes
+}
 </script>
   
 </body>
