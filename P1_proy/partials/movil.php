@@ -38,9 +38,6 @@
 <template id="sidemenu.html">
    <ons-page>
     <ons-list-title>Menú</ons-list-title>
-    <ons-list>
-       <ons-list-item onclick="fn.loadView(0)">Hola</ons-list-item>
-    </ons-list>
 </template>
 
 <template id="tabbar.html">
@@ -98,7 +95,6 @@
       <!--
         <ons-list-item>
             <span class="miItem">BLUE</span>
-            <ons-checkbox></ons-checkbox>            
             <ons-button class="elimina">Eliminar</ons-button>            
         </ons-list-item>
         <ons-list-item><span class="miItem">RED</span> <ons-button class="elimina">X</ons-button></ons-list-item>
@@ -111,7 +107,9 @@
 </template>
   
 <script>
-  
+
+  /* =========================CARRUSEL======================================== */
+
   /* Funciones para mover el carrusel */
   var prev = function() {
     var carousel = document.getElementById('carousel');
@@ -122,50 +120,6 @@
     var carousel = document.getElementById('carousel');
     carousel.next();
   };
-
-  /* Función para añadir un elemento al carrusel */
-  function addItem(color, text, img, precio){
-    let nodo = document.createElement('ons-carousel-item')
-    nodo.style.backgroundColor = color
-    nodo.innerHTML = `<div style="text-align: center; font-size: 30px; margin-top: 20px; color: black;">
-                      ${text}
-                      <br>
-                      <br>
-                      <img src=${img}>
-                      <br>
-                      <br>
-                      Precio : ${precio}€
-                      </div>`
-    document.getElementById('carousel').appendChild(nodo)
-  }
-
-  /* Función para obtener los productos de la base de datos */
-  function insertarOpcionesMovil(){
-    fetch('/P1_proy/partials/datos.php')
-    .then(response=>{
-                    if(response.ok)
-                        return response.json()
-                    else
-                        throw response.statusText
-    })
-    .then(data=>insertarOpcionesListaMovil(data))
-    .catch(err=>console.log('Fetch error: ', err));
-}
-
-function insertarOpcionesListaMovil(L){
-    L.forEach( x => {
-        var nombreProducto = x.nombre
-        addItemList(nombreProducto)
-    })
-}
-
-function addItemList(text){
-    let nodo = document.createElement('ons-list-item')
-    nodo.innerHTML = `<span class="miItem">${text}</span>
-                      <ons-checkbox></ons-checkbox>            
-                      <ons-button class="elimina">Eliminar</ons-button>`
-    document.getElementById('productsList').appendChild(nodo)
-  }
 
   /* Ejemplo para añadir elementos al carrusel cuando se carga una página */
   document.addEventListener("init", function(event) {
@@ -196,13 +150,33 @@ function insertarListaMovil(Lista){
     })
 }
 
-  document.addEventListener("init", function(event) {
-        var page = event.target;
-        if( page.matches('#page2') ) { 
-            insertarListaMovil()
-        }
-  })
+/* Función para añadir un elemento al carrusel */
+function addItem(color, text, img, precio){
+    let nodo = document.createElement('ons-carousel-item')
+    nodo.style.backgroundColor = color
+    nodo.innerHTML = `<div style="text-align: center; font-size: 30px; margin-top: 20px; color: black;">
+                      ${text}
+                      <br>
+                      <br>
+                      <img src=${img}>
+                      <br>
+                      <br>
+                      Precio : ${precio} €
+                      <br>
+                      <br>
+                      <button onclick=addItemList()>Comprar</button>
+                      </div>`
+    document.getElementById('carousel').appendChild(nodo)
+  }
 
+/*================================================================================== */
+
+function addItemList(text){
+    let node = document.createElement('ons-list-item')
+    node.innerHTML = `<span class="miItem">${text}</span>
+                      <ons-button class="elimina">Eliminar</ons-button>`
+    document.getElementById('productsList').appendChild(node)
+  }
 </script>
   
 </body>
