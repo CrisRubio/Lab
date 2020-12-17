@@ -66,6 +66,9 @@ switch ($action) {
     case "realizar_compra":
         $central = "<p>Todavía no puedo añadir a la cesta</p>"; //cesta en $_SESSION["cesta"]
         break;
+    case "movil":
+        $central = "/partials/movil.php";
+        break;
     case "cerrar_sesion":
         session_destroy();
         header("Location: portal.php");

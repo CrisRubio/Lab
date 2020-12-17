@@ -11,6 +11,9 @@
 						<a href="?action=sobre_nosotros">Sobre nosotros</a>
 					</li>
 					<li>
+						<a href="?action=movil">Móvil</a>
+					</li>
+					<li>
 						<a href="?action=listar_productos">Productos</a>
 					</li>
 					<?php 
